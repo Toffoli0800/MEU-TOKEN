@@ -61,11 +61,12 @@
         }
         .banner img, .logo img {
             width: 100%;
-            max-width: 600px;
+            max-width: 400px;
             height: auto;
         }
         .chart-container {
-            width: 50%;
+            width: 80%;
+            max-width: 400px;
             margin: auto;
         }
     </style>
@@ -73,10 +74,10 @@
 <body>
     <header>BROKE ONE TESLA 🚀</header>
     <div class="logo">
-        <img src="https://via.placeholder.com/150" alt="BROKE ONE TESLA Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Tesla_logo.png" alt="BROKE ONE TESLA Logo">
     </div>
     <div class="banner">
-        <img src="https://via.placeholder.com/600x300" alt="Tesla Meme">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Tesla_Model_S_crash_test.jpg/800px-Tesla_Model_S_crash_test.jpg" alt="Tesla Meme">
     </div>
     <div class="container">
         <h1>Welcome to BROKE ONE TESLA 🚀</h1>
@@ -117,7 +118,13 @@
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'bottom'
+                        position: 'bottom',
+                        labels: {
+                            color: '#fff',
+                            font: {
+                                size: 14
+                            }
+                        }
                     }
                 }
             }
