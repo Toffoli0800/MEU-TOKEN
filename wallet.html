@@ -52,9 +52,10 @@
             cursor: pointer;
             transition: 0.3s;
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 10px;
+            right: 10px;
             z-index: 1000;
+            border: none;
         }
         .wallet-btn:hover {
             background-color: #ffaa00;
@@ -71,9 +72,8 @@
 <body>
     <header>
         BROKE ONE TESLA 🚀
+        <button class="wallet-btn" onclick="connectMetaMask()">Connect Wallet</button>
     </header>
-    
-    <button class="wallet-btn" onclick="connectMetaMask()">Connect Wallet</button>
     
     <nav class="navbar">
         <a href="index.html">Home</a>
@@ -86,8 +86,6 @@
     
     <div class="container">
         <h1>Connect Your Wallet</h1>
-        <button class="wallet-btn" onclick="connectSolana()">Connect Solana (Phantom)</button>
-        <button class="wallet-btn" onclick="connectWalletConnect()">Connect WalletConnect</button>
         <p id="wallet-address"></p>
     </div>
     
