@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BROKE ONE TESLA 🚀 - Contact</title>
+    <title>BROKE ONE TESLA 🚀 - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -34,54 +34,65 @@
         .navbar a:hover {
             color: #ff6600;
         }
-        .container {
-            padding: 100px 50px;
-            max-width: 900px;
-            margin: auto;
+        .hero {
+            background: url('https://i.imgur.com/PmI2ZIi.jpeg') no-repeat center;
+            background-size: cover;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 20px;
+            position: relative;
         }
-        .form-container input, .form-container textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.05);
         }
-        .form-container button {
-            background-color: #ff0000;
-            padding: 10px 20px;
-            border: none;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ff6600;
             color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
+            padding: 20px 40px;
+            font-size: 2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 30px;
         }
-        .form-container button:hover {
-            background-color: #cc0000;
+        .button:hover {
+            background-color: #cc5500;
         }
     </style>
 </head>
 <body>
     <header>BROKE ONE TESLA 🚀</header>
     <nav class="navbar">
-        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="roadmap.html">Roadmap</a>
         <a href="tokenomics.html">Tokenomics</a>
         <a href="team.html">Team</a>
         <a href="partners.html">Partners</a>
+        <a href="contact.html">Contact</a>
     </nav>
-    
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p>Have questions or want to collaborate? Reach out to us!</p>
-        <div class="form-container">
-            <input type="text" placeholder="Your Name"><br>
-            <input type="email" placeholder="Your Email"><br>
-            <textarea placeholder="Your Message"></textarea><br>
-            <button>Send</button>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>BROKE ONE TESLA - The Meme Revolution</h1>
+            <a href="#" class="button">Buy Now</a>
         </div>
     </div>
-    
     <footer>
         &copy; 2025 BROKE ONE TESLA. All rights reserved.
     </footer>
