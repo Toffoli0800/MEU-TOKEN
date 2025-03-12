@@ -24,6 +24,7 @@
             font-size: 2.5rem;
             font-weight: bold;
             text-transform: uppercase;
+            position: relative;
         }
         .navbar {
             background-color: #111;
@@ -41,12 +42,6 @@
             color: #ff6600;
             text-decoration: underline;
         }
-        .container {
-            padding: 100px 50px;
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
         .wallet-btn {
             background-color: #ffcc00;
             color: #000;
@@ -56,16 +51,27 @@
             border-radius: 10px;
             cursor: pointer;
             transition: 0.3s;
-            margin: 10px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
         .wallet-btn:hover {
             background-color: #ffaa00;
             transform: scale(1.1);
         }
+        .container {
+            padding: 100px 50px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <header>BROKE ONE TESLA 🚀</header>
+    <header>
+        BROKE ONE TESLA 🚀
+        <button class="wallet-btn" onclick="connectMetaMask()">Connect Wallet</button>
+    </header>
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="roadmap.html">Roadmap</a>
@@ -77,7 +83,6 @@
     
     <div class="container">
         <h1>Connect Your Wallet</h1>
-        <button class="wallet-btn" onclick="connectMetaMask()">Connect MetaMask</button>
         <button class="wallet-btn" onclick="connectSolana()">Connect Solana (Phantom)</button>
         <button class="wallet-btn" onclick="connectWalletConnect()">Connect WalletConnect</button>
         <p id="wallet-address"></p>
