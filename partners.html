@@ -68,19 +68,29 @@
             margin: auto;
             text-align: center;
         }
-        .buy-btn {
-            display: inline-block;
-            background-color: #ff6600;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 1.5rem;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: 0.3s;
-            margin-top: 20px;
+        .partners {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 50px;
         }
-        .buy-btn:hover {
-            background-color: #cc5500;
+        .partner {
+            background-color: #111;
+            padding: 15px;
+            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+        }
+        .partner img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -96,7 +106,6 @@
         <a href="roadmap.html">Roadmap</a>
         <a href="tokenomics.html">Tokenomics</a>
         <a href="team.html">Team</a>
-        <a href="about.html">About</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -121,9 +130,6 @@
                 <h3>OKX</h3>
             </div>
         </div>
-        
-        <p id="wallet-address" style="position: fixed; top: 60px; right: 20px; font-size: 1rem; color: #ffcc00;"></p>
-        <a href="#" class="buy-btn">Buy Now</a>
     </div>
     
     <footer>
@@ -138,24 +144,6 @@
             } else {
                 alert("MetaMask not detected. Please install it to connect your wallet.");
             }
-        }
-
-        async function connectSolana() {
-            if (window.solana && window.solana.isPhantom) {
-                try {
-                    const response = await window.solana.connect();
-                    document.getElementById('wallet-address').innerText = `Connected: ${response.publicKey.toString()}`;
-                } catch (err) {
-                    console.error(err);
-                    alert("Solana wallet connection failed.");
-                }
-            } else {
-                alert("Phantom Wallet not detected. Please install it to connect.");
-            }
-        }
-
-        async function connectWalletConnect() {
-            alert("WalletConnect integration is in progress.");
         }
     </script>
 </body>
