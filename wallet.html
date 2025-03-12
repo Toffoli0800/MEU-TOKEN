@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROKE ONE TESLA 🚀 - Partners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/@walletconnect/client/1.7.1/index.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #000000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, #ff0000, #660000);
+            padding: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar {
+            background-color: #111;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+        }
+        .navbar a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+        .container {
+            padding: 100px 50px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+        .wallet-btn {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+        }
+        .wallet-btn:hover {
+            background-color: #ffaa00;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>BROKE ONE TESLA 🚀</header>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="team.html">Team</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Connect Your Wallet</h1>
+        <button class="wallet-btn" onclick="connectMetaMask()">Connect MetaMask</button>
+        <button class="wallet-btn" onclick="connectSolana()">Connect Solana (Phantom)</button>
+        <button class="wallet-btn" onclick="connectWalletConnect()">Connect WalletConnect</button>
+        <p id="wallet-address"></p>
+    </div>
+    
+    <footer>
+        &copy; 2025 BROKE ONE TESLA. All rights reserved.
+    </footer>
+    
+    <script>
+        async function connectMetaMask() {
+            if (window.ethereum) {
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                document.getElementById('wallet-address').innerText = `Connected: ${accounts[0]}`;
+            } else {
+                alert("MetaMask not detected. Please install it to connect your wallet.");
+            }
+        }
+
+        async function connectSolana() {
+            if (window.solana && window.solana.isPhantom) {
+                try {
+                    const response = await window.solana.connect();
+                    document.getElementById('wallet-address').innerText = `Connected: ${response.publicKey.toString()}`;
+                } catch (err) {
+                    console.error(err);
+                    alert("Solana wallet connection failed.");
+                }
+            } else {
+                alert("Phantom Wallet not detected. Please install it to connect.");
+            }
+        }
+
+        async function connectWalletConnect() {
+            alert("WalletConnect integration is in progress.");
+        }
+    </script>
+</body>
+</html>
