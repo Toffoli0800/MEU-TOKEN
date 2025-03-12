@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BROKE ONE TESLA 🚀 - The Next Big Memecoin</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>BROKE ONE TESLA 🚀 - About</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -24,122 +23,83 @@
         }
         .navbar {
             background-color: #000000;
+            padding: 15px;
         }
         .navbar a {
             color: #ffcc00;
             text-decoration: none;
             margin: 0 15px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
         .navbar a:hover {
             color: #ff6600;
         }
         .container {
             padding: 100px 50px;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             text-align: center;
-        }
-        .section {
-            padding: 80px 20px;
-            border-bottom: 2px solid #ff0000;
-        }
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            margin: 50px auto;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.5);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
         }
     </style>
 </head>
 <body>
     <header>BROKE ONE TESLA 🚀</header>
     <nav class="navbar">
-        <a href="#about">About</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#team">Team</a>
-        <a href="#partners">Partners</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="team.html">Team</a>
+        <a href="partners.html">Partners</a>
+        <a href="contact.html">Contact</a>
     </nav>
+    
     <div class="container" id="about">
-        <h2>About BROKE ONE TESLA</h2>
-        <p>BROKE ONE TESLA is the ultimate meme coin inspired by viral protests against Elon Musk and Tesla. A token fueled by humor, community, and rebellion.</p>
+        <h1>About BROKE ONE TESLA</h1>
+        <p>BROKE ONE TESLA is a revolutionary memecoin inspired by viral Tesla destruction protests. It symbolizes rebellion, humor, and the power of the community in the crypto space.</p>
+        <p>Join the movement and be part of the next big meme revolution in the blockchain world!</p>
     </div>
-    <div class="container section" id="roadmap">
-        <h2>Roadmap</h2>
+    
+    <div class="container" id="roadmap">
+        <h1>Roadmap</h1>
         <p><strong>Phase 1:</strong> Token launch and community growth.</p>
         <p><strong>Phase 2:</strong> Marketing campaigns and exchange listings.</p>
         <p><strong>Phase 3:</strong> Partnerships and NFT integration.</p>
         <p><strong>Phase 4:</strong> Merch, charity donations, and global expansion.</p>
     </div>
-    <div class="container section" id="tokenomics">
-        <h2>Tokenomics</h2>
-        <canvas id="tokenomicsChart"></canvas>
+    
+    <div class="container" id="tokenomics">
+        <h1>Tokenomics</h1>
+        <p>The BROKE ONE TESLA token is designed for fair distribution and long-term growth.</p>
+        <p><strong>50%:</strong> Public Sale</p>
+        <p><strong>20%:</strong> Marketing</p>
+        <p><strong>15%:</strong> Development</p>
+        <p><strong>10%:</strong> Team</p>
+        <p><strong>5%:</strong> Charity & Community</p>
     </div>
-    <div class="container section" id="team">
-        <h2>Meet The Team</h2>
+    
+    <div class="container" id="team">
+        <h1>Meet The Team</h1>
         <p>🚀 John Doe - Founder & CEO</p>
         <p>💻 Jane Smith - Blockchain Developer</p>
         <p>🎨 Mike Johnson - Creative Director</p>
     </div>
-    <div class="container section" id="partners">
-        <h2>Our Partners</h2>
+    
+    <div class="container" id="partners">
+        <h1>Our Partners</h1>
         <p>Partnering with top crypto projects and influencers to make BROKE ONE TESLA the biggest meme token.</p>
     </div>
-    <div class="container section" id="contact">
-        <h2>Contact Us</h2>
+    
+    <div class="container" id="contact">
+        <h1>Contact Us</h1>
         <p>Have questions or want to collaborate? Reach out to us!</p>
         <input type="text" placeholder="Your Name" style="padding: 10px; margin: 10px;"><br>
         <input type="email" placeholder="Your Email" style="padding: 10px; margin: 10px;"><br>
         <textarea placeholder="Your Message" style="padding: 10px; margin: 10px; width: 80%;"></textarea><br>
         <button style="padding: 15px 30px; background-color: #ff0000; color: white; border: none; font-size: 1.2rem;">Send</button>
     </div>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/AWi7AeZaNcI" frameborder="0" allowfullscreen></iframe>
-    </div>
+    
     <footer>
         &copy; 2025 BROKE ONE TESLA. All rights reserved.
     </footer>
-    <script>
-        const ctx = document.getElementById('tokenomicsChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Public Sale', 'Marketing', 'Development', 'Team', 'Charity & Community'],
-                datasets: [{
-                    data: [50, 20, 15, 10, 5],
-                    backgroundColor: ['#ffcc00', '#ff6600', '#ff3333', '#33cc33', '#3366ff']
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            color: '#fff',
-                            font: {
-                                size: 14
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 </html>
