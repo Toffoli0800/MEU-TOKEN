@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROKE ONE TESLA 🚀 - Tokenomics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #000000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, #ff0000, #660000);
+            padding: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar {
+            background-color: #111;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+        }
+        .navbar a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+        .container {
+            padding: 100px 50px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+        .chart-container {
+            width: 60%;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .legend div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legend span {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>BROKE ONE TESLA 🚀</header>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="team.html">Team</a>
+        <a href="partners.html">Partners</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Tokenomics</h1>
+        <p>Here’s how BROKE ONE TESLA’s supply is distributed to ensure sustainability and growth.</p>
+        <div class="chart-container">
+            <canvas id="tokenomicsChart"></canvas>
+        </div>
+        <div class="legend">
+            <div><span style="background-color:#ffcc00;"></span> Public Sale - 50%</div>
+            <div><span style="background-color:#ff6600;"></span> Marketing - 20%</div>
+            <div><span style="background-color:#ff3333;"></span> Development - 15%</div>
+            <div><span style="background-color:#33cc33;"></span> Team - 10%</div>
+            <div><span style="background-color:#3366ff;"></span> Charity & Community - 5%</div>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 BROKE ONE TESLA. All rights reserved.
+    </footer>
+    
+    <script>
+        const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Public Sale', 'Marketing', 'Development', 'Team', 'Charity & Community'],
+                datasets: [{
+                    data: [50, 20, 15, 10, 5],
+                    backgroundColor: ['#ffcc00', '#ff6600', '#ff3333', '#33cc33', '#3366ff']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
