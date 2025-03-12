@@ -48,7 +48,10 @@
             margin: auto;
         }
         .hero-section {
-            background: url('https://postimage.me/image/GlKCbJSakAEi72B.UjmYae') no-repeat center;
+            background: url('https://i.imgur.com/PmI2ZIi.jpeg') no-repeat center;
+            background-size: cover;
+            position: relative;
+        }
             background-size: cover;
             height: 600px;
             display: flex;
@@ -61,10 +64,14 @@
             font-weight: bold;
             padding: 20px;
         }
-        .hero-section img {
-            margin-top: 20px;
-            max-width: 80%;
-            border-radius: 10px;
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.84);
         }
         .button {
             display: inline-block;
