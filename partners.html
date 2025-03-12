@@ -38,6 +38,19 @@
             color: #ff6600;
             text-decoration: underline;
         }
+        .wallet {
+            background-color: #ffcc00;
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .wallet:hover {
+            background-color: #ff6600;
+            color: #fff;
+        }
         .container {
             padding: 100px 50px;
             max-width: 900px;
@@ -55,17 +68,13 @@
             background-color: #111;
             padding: 20px;
             border-radius: 15px;
-            width: 200px;
+            width: 250px;
             text-align: center;
             box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         .partner img {
             width: 150px;
-            height: 80px;
-            object-fit: contain;
+            height: auto;
             margin-bottom: 15px;
         }
     </style>
@@ -77,28 +86,29 @@
         <a href="roadmap.html">Roadmap</a>
         <a href="tokenomics.html">Tokenomics</a>
         <a href="team.html">Team</a>
-        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="about.html">About</a> <!-- Movido para a penúltima posição -->
+        <button class="wallet">Connect Wallet</button> <!-- Adicionada a carteira -->
     </nav>
     
     <div class="container">
         <h1>Our Partners</h1>
         <div class="partners">
             <div class="partner">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Binance_Logo.svg" alt="Binance">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Binance_Logo.svg" alt="Binance">
                 <h3>Binance</h3>
             </div>
             <div class="partner">
-                <img src="https://cdn.iconscout.com/icon/free/png-512/free-coinbase-logo-icon-download-in-svg-png-gif-file-formats--web-crypro-trading-platform-logos-pack-icons-7651204.png?f=webp&w=256" alt="Coinbase">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Coinbase_Logo.svg" alt="Coinbase">
                 <h3>Coinbase</h3>
             </div>
             <div class="partner">
-                <img src="https://altcoinsbox.com/wp-content/uploads/2023/01/kraken-logo-300x300.webp" alt="Kraken">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kraken_Logo.png" alt="Kraken">
                 <h3>Kraken</h3>
             </div>
             <div class="partner">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Logo-OKX.png/220px-Logo-OKX.png" alt="OKX">
-                <h3>OKX</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/FTX_Logo.svg" alt="FTX">
+                <h3>FTX</h3>
             </div>
         </div>
     </div>
